@@ -34,21 +34,43 @@ It lets you build simple decision trees (like *“If revenue > $1M → trigger e
 
 ##  Folder Structure
 
-**src/
-├── components/
-│ ├── FlowEditor.jsx # Handles React Flow canvas and node interactions
-│ ├── ChartPanel.jsx # Displays node-based data using charts
-│ ├── Sidebar.jsx # Controls for adding or modifying nodes
+decision-intelligence-dashboard/
+├── public/
+│ ├── index.html
+│ └── favicon.ico
 │
-├── redux/
-│ ├── store.js # Redux store setup
-│ ├── flowSlice.js # Handles node and edge state
+├── src/
+│ ├── assets/
+│ │ └── logo.svg
+│ │
+│ ├── components/
+│ │ ├── FlowEditor.jsx # Handles drag-and-drop workflow (React Flow)
+│ │ ├── ChartPanel.jsx # Displays time-series & bar charts
+│ │ ├── Sidebar.jsx # Sidebar for adding/managing nodes
+│ │ └── NodeConfigModal.jsx # Optional: Modal for conditional logic editing
+│ │
+│ ├── redux/
+│ │ ├── store.js # Redux store configuration
+│ │ ├── flowSlice.js # Handles workflow state (nodes/edges)
+│ │ └── chartSlice.js # Manages chart data and real-time updates
+│ │
+│ ├── utils/
+│ │ ├── conditionalEval.js # Evaluates conditional rules between nodes
+│ │ └── mockData.js # Contains mock workflow & revenue data
+│ │
+│ ├── styles/
+│ │ ├── App.css
+│ │ ├── FlowEditor.css
+│ │ └── ChartPanel.css
+│ │
+│ ├── App.jsx # Root component (flows + charts)
+│ ├── index.js # React entry point
+│ └── setupTests.js # Optional: Testing setup
 │
-├── utils/
-│ ├── conditionalEval.js # Simple evaluator for node conditions
-│
-├── App.jsx # Main layout and router
-└── index.js # React entry point**
+├── package.json
+├── README.md
+├── .gitignore
+└── vite.config.js / webpack.config.js
 
 
 
