@@ -34,7 +34,7 @@ It lets you build simple decision trees (like *“If revenue > $1M → trigger e
 
 ##  Folder Structure
 
-src/
+**src/
 ├── components/
 │ ├── FlowEditor.jsx # Handles React Flow canvas and node interactions
 │ ├── ChartPanel.jsx # Displays node-based data using charts
@@ -48,7 +48,7 @@ src/
 │ ├── conditionalEval.js # Simple evaluator for node conditions
 │
 ├── App.jsx # Main layout and router
-└── index.js # React entry point
+└── index.js # React entry point**
 
 
 
