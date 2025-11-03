@@ -1,0 +1,17 @@
+{
+"workflowNodes": [
+{ "id": "1", "type": "start", "position": {"x": 0, "y": 0}, "data": { "label": "Start" } },
+{ "id": "2", "type": "decision", "position": {"x": 250, "y": 0}, "data": { "label": "Revenue Check", "rule": "revenue > 1000000" } },
+{ "id": "3", "type": "action", "position": {"x": 550, "y": -80}, "data": { "label": "Trigger Expansion" } },
+{ "id": "4", "type": "action", "position": {"x": 550, "y": 80}, "data": { "label": "Hold" } }
+],
+"workflowEdges": [
+{ "id": "e1-2", "source": "1", "target": "2", "label": "next" },
+{ "id": "e2-3", "source": "2", "target": "3", "label": "true" },
+{ "id": "e2-4", "source": "2", "target": "4", "label": "false" }
+],
+"revenueData": [
+{ "time": "2025-01-01T00:00:00Z", "value": 900000 },
+{ "time": "2025-02-01T00:00:00Z", "value": 1100000 }
+]
+}
