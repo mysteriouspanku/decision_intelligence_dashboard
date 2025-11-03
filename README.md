@@ -48,7 +48,8 @@ It lets you build simple decision trees (like *“If revenue > $1M → trigger e
 │ ├── conditionalEval.js # Simple evaluator for node conditions
 │
 ├── App.jsx # Main layout and router
-└── index.js # React entry point```
+└── index.js # React entry point
+```
 
 
 
